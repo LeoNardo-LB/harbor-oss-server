@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.maple</groupId>
+    <artifactId>harbor-oss-server</artifactId>
+    <packaging>pom</packaging>
+    <version>${harbor-fast-boot-version}</version>
+    <modules>
+        <module>common/common-utils</module>
+        <module>common/common-dal</module>
+        <module>common/common-integration</module>
+        <module>common/common-facade</module>
+        <module>core/core-model</module>
+        <module>core/core-service</module>
+        <module>implement/service-share</module>
+        <module>implement/service-impl</module>
+        <module>bootstrap</module>
+        <module>web-portal</module>
+        <module>z-test</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <harbor-fast-boot-version>1.0-SNAPSHOT</harbor-fast-boot-version>
+        <harbor-fast-boot-facade-version>1.0-SNAPSHOT</harbor-fast-boot-facade-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--项目本身依赖-->
+            <dependency>
+                <groupId>com.maple</groupId>
+                <artifactId>common-dal</artifactId>
+                <version>${harbor-fast-boot-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.maple</groupId>
+                <artifactId>common-facade</artifactId>
+                <version>${harbor-fast-boot-facade-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.maple</groupId>
+                <artifactId>common-integration</artifactId>
+                <version>${harbor-fast-boot-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.maple</groupId>
+                <artifactId>common-utils</artifactId>
+                <version>${harbor-fast-boot-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.maple</groupId>
+                <artifactId>core-model</artifactId>
+                <version>${harbor-fast-boot-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.maple</groupId>
+                <artifactId>core-service</artifactId>
+                <version>${harbor-fast-boot-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.maple</groupId>
+                <artifactId>service-share</artifactId>
+                <version>${harbor-fast-boot-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.maple</groupId>
+                <artifactId>service-impl</artifactId>
+                <version>${harbor-fast-boot-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.maple</groupId>
+                <artifactId>bootstrap</artifactId>
+                <version>${harbor-fast-boot-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.maple</groupId>
+                <artifactId>web-portal</artifactId>
+            <version>${harbor-fast-boot-version}</version>
+            </dependency>
+
+            <!--二方依赖-->
+
+
+            <!--三方依赖-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.8.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.12.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.20</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>31.1-jre</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.5.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.30</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>4.9.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>8.4.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>5.7.3</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
