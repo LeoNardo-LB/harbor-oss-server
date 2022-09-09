@@ -8,6 +8,10 @@ spring:
     url: jdbc:mysql://49.234.3.131:3306/milk_oss
     username: leonardo
     password: cs19jiang1
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
@@ -17,3 +21,9 @@ oss:
   endpoint: http://49.234.3.131:9000
   accessKey: leonardo
   secretKey: cs19jiang1
+  bucket:
+    name:
+      unique: unique-bucket-1
+logging:
+  level:
+    root: info

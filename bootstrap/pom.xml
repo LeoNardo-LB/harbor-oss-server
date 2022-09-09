@@ -20,13 +20,9 @@
     <dependencies>
         <dependency>
             <groupId>com.maple</groupId>
-            <artifactId>service-impl</artifactId>
+            <artifactId>web-portal</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

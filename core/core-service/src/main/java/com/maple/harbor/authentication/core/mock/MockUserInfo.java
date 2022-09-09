@@ -6,6 +6,8 @@ import java.util.Set;
 @Data
 public class MockUserInfo {
 
+    private String id;
+
     private Long accountId;
 
     private String userName;

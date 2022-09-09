@@ -3,15 +3,10 @@ package com.maple.harbor.result;
 import lombok.Data;
 
 @Data
-public class MvcResult<T> {
-
-    private Boolean success;
+public class MvcResult<T> extends BaseResult<T>{
 
     private int code;
 
-    private String message;
-
-    private T data;
 
     public static <T> MvcResult<T> success(T data){
         MvcResult<T> result = new MvcResult<>();
